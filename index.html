@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Livery Studio</title></title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Livery Studio</h1>
+
+  <div class="toolbar">
+    <button onclick="setTool('paint')">🎨 Paint</button>
+    <button onclick="setTool('text')">🔤 Text</button>
+    <button onclick="setTool('eraser')">🧽 Eraser</button>
+    <button onclick="clearCanvas()">🧹 Clear</button>
+    <button onclick="exportImage()">📤 Export</button>
+  </div>
+
+  <canvas id="canvas" width="1000" height="500"></canvas>
+
+  <script src="editor.js"></script>
+</body>
+</html>
