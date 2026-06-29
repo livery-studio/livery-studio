@@ -1,41 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Livery Studio</title></title>
-  <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Livery Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
-  <h1>Livery Studio</h1>
+<body class="home">
 
-<div class="toolbar">
+<div class="header">
 
-  <label>🎨 Paint Color</label>
-  <input type="color" id="paintColor" value="#000000">
+    <h1>Livery Studio</h1>
 
-  <label>📏 Brush Size</label>
-  <input type="range" id="brushSize" min="1" max="30" value="3">
-
-  <label>🧽 Eraser Size</label>
-  <input type="range" id="eraserSize" min="5" max="50" value="10">
-
-  <label>🔤 Font Size</label>
-  <input type="range" id="fontSize" min="10" max="80" value="24">
-
-  <label>🅰️ Text Color</label>
-  <input type="color" id="textColor" value="#000000">
-
-  <button onclick="setTool('paint')">🎨 Paint</button>
-  <button onclick="setTool('text')">🔤 Text</button>
-  <button onclick="setTool('eraser')">🧽 Eraser</button>
-  <button onclick="clearCanvas()">🧹 Clear</button>
-  <button onclick="exportImage()">📤 Export</button>
+    <p>Create professional airline liveries.</p>
 
 </div>
 
-  <canvas id="canvas" width="1000" height="500"></canvas>
+<div class="aircraftGrid">
 
-  <script src="editor.js"></script>
+    <div class="card" data-template="atr72-500">
+        <img src="templates/atr72-500.png">
+        <h3>ATR 72-500</h3>
+    </div>
+
+    <div class="card" data-template="a220-300">
+        <img src="templates/a220-300.png">
+        <h3>Airbus A220-300</h3>
+    </div>
+
+    <div class="card" data-template="a320neo">
+        <img src="templates/a320neo.png">
+        <h3>Airbus A320neo</h3>
+    </div>
+
+    <div class="card" data-template="a321neo">
+        <img src="templates/a321neo.png">
+        <h3>Airbus A321neo</h3>
+    </div>
+
+    <div class="card" data-template="b737max8">
+        <img src="templates/b737max8.png">
+        <h3>Boeing 737 MAX 8</h3>
+    </div>
+
+    <div class="card" data-template="b787-9">
+        <img src="templates/b787-9.png">
+        <h3>Boeing 787-9</h3>
+    </div>
+
+</div>
+
+<script>
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.onclick=()=>{
+
+localStorage.setItem("template",card.dataset.template);
+
+location.href="editor.html";
+
+};
+
+});
+
+</script>
+
 </body>
+
 </html>
