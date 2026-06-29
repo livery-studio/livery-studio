@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Livery Studio Editor</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="toolbar">
+
+<div class="section">
+
+<button id="paintTool">🖌 Paint</button>
+
+<button id="eraserTool">🩹 Eraser</button>
+
+<button id="textTool">🔤 Text</button>
+
+</div>
+
+<div class="section">
+
+<label>Paint</label>
+
+<input type="color" id="paintColor" value="#ff0000">
+
+<label>Brush</label>
+
+<input type="range" id="brushSize" min="1" max="100" value="12">
+
+</div>
+
+<div class="section">
+
+<input
+type="text"
+id="textInput"
+placeholder="Text">
+
+<select id="fontSelect">
+
+<option>Arial</option>
+
+<option>Helvetica</option>
+
+<option>Verdana</option>
+
+<option>Impact</option>
+
+<option>Courier New</option>
+
+<option>Times New Roman</option>
+
+</select>
+
+<input
+type="number"
+id="fontSize"
+value="42">
+
+<input
+type="color"
+id="textColor"
+value="#000000">
+
+<button id="addText">
+
+Add Text
+
+</button>
+
+</div>
+
+<div class="section">
+
+<button id="undo">
+
+Undo
+
+</button>
+
+<button id="redo">
+
+Redo
+
+</button>
+
+<button id="download">
+
+Download PNG
+
+</button>
+
+</div>
+
+</div>
+
+<div id="workspace">
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
